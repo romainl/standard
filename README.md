@@ -285,12 +285,27 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 ```
 
-
 Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for `standard` (though configuration may be necessary).
 
 [vim-1]: https://github.com/w0rp/ale
 [vim-2]: https://github.com/neomake/neomake
 [vim-3]: https://github.com/vim-syntastic/syntastic
+
+Note that Vim >9.0 includes a so-called "compiler script" for standard.
+
+- Enable the compiler:
+
+  ```vim
+  :compiler standard
+  ```
+
+- Use it on the current buffer:
+
+  ```vim
+  :make %
+  ```
+
+See `:help quickfix`.
 
 ### Emacs
 
